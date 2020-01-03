@@ -11,7 +11,10 @@ First clone the project. Then run:
 
 After all node modules have been installed, open 2 separate terminals and run:
 
-**client** : `npm run serve`
-**server** : `npm run start`
+### client
+`npm run serve`
+
+### server
+`npm run start`
 
 **Note:** If you experience an error with the server regarding Nodemon, you may need to install it globally(`npm i -g nodemon`) or just run `node app.js`);
