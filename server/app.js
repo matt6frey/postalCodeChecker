@@ -2,13 +2,18 @@ const express = require('express');
 const xlsx = require('node-xlsx').default;
 const app = express();
 
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "http://localhost:8080");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
 app.get('/ping', (request, response) => {
     response.statusCode = 200;
     response.json({
         message: "OK"
     });
 });
-
 
 app.get('/availability/:postalCode', (request, response) => {
     let postalCode = (request.params.postalCode) ? request.params.postalCode : false;
@@ -36,4 +41,5 @@ app.get('/availability/:postalCode', (request, response) => {
     response.json({availability: (results.length) ? results[0] : results, message: message});
 });
 
+console.log("Server listening on port 3000")
 app.listen(3000);
