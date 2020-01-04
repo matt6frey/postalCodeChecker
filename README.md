@@ -18,3 +18,7 @@ After all node modules have been installed, open 2 separate terminals and run:
 `npm run start`
 
 **Note:** If you experience an error with the server regarding Nodemon, you may need to install it globally(`npm i -g nodemon`) or just run `node app.js`);
+
+## Preview
+
+<img src="./repo/screenshot.gif" style="width:100%; height: auto; margin-top: 1rem; margin-bottom: 1rem;">
