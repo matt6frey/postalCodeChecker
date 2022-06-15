@@ -49,7 +49,7 @@ app.get('/alt/:postalCode', (request, response) => {
     if (postalCode) {
         postalCode = postalCode.toUpperCase().replace(" ", '');
         // Match Canadian or USA postal codes
-        if(postalCode.match(/(\D\d\D\d\D\d){1}/) || postalCode.match(/\d{5}/) && postalCode.length === 5) {
+        if(postalCode.match(/(\D\d\D\d\D\d){1}/) || postalCode.match(/\d{5}/)) {
             const wb = XLSX.readFile('db/postal_codes.xlsx');
             const sheetnames = wb.SheetNames;
             const rows = XLSX.utils.sheet_to_json(wb.Sheets[sheetnames[0]]);
@@ -57,16 +57,9 @@ app.get('/alt/:postalCode', (request, response) => {
             for (let i = 0; i < len; i++) {
                 if(rows[i].POST_CODE === postalCode) { 
                     results.push(rows[i]);
-                    // break; // 7s
                 }
-            } // 6s
-
-            // for (let row of rows) {
-            //     if(row.POST_CODE === postalCode) {
-            //         results.push(row);
-            //         // break; // 7s
-            //     }
-            // } // 6s
+            } 
+          
         } else {
             response.statusCode = 404;
             message = "Invalid Postal Code.";
