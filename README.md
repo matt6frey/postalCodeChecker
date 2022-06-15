@@ -2,7 +2,7 @@
  
 This is a demo using Node.js and Vue.js. 
 
-<p><a href="https://postalcode-ex-deploy.herokuapp.com/" style="padding: 1rem; color: #fff; background-color: #007bff; border-color: #007bff; border-radius: 3px;">View Demo</a></p>
+<p><a href="https://postalcode-ex-deploy.herokuapp.com/" disabled style="padding: 1rem; color: #fff; background-color: #007bff; border-color: #007bff; border-radius: 3px;">View Demo</a></p> (No longer Available)
 
 ## Installation 
 
