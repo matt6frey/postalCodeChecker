@@ -2,7 +2,7 @@
  
 This is a demo using Node.js and Vue.js. 
 
-<p>~~View Demo~~</p> (No longer Available)
+~~View Demo~~ (No longer Available)
 
 ## Installation 
 
